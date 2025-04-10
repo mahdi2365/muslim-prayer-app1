@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الأذكار اليومية</title>
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+    }
+    h1 {
+      color: #3e8e41;
+    }
+    .zekr-container {
+      margin: 20px auto;
+      padding: 25px;
+      background: #fff;
+      border-radius: 15px;
+      max-width: 80%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    button {
+      background-color: #4CAF50;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📿 الأذكار اليومية</h1>
+
+  <div class="zekr-container">
+    <h2>اذكر الله دائماً</h2>
+    <p id="zekr-text">اضغط على الزر للحصول على ذكر اليوم</p>
+    <button onclick="showZekr()">اعرض الذكر</button>
+  </div>
+
+  <footer>
+    <p>تم التصميم من طرف مهدي</p>
+  </footer>
+
+  <script>
+    const azkar = [
+      "سبحان الله وبحمده سبحان الله العظيم",
+      "لا إله إلا الله وحده لا شريك له",
+      "اللهم صل وسلم على نبينا محمد",
+      "أستغفر الله العظيم وأتوب إليه",
+      "لا حول ولا قوة إلا بالله"
+    ];
+
+    function showZekr() {
+      const zekr = azkar[Math.floor(Math.random() * azkar.length)];
+      document.getElementById('zekr-text').innerText = zekr;
+    }
+  </script>
+
+</body>
+</html>
